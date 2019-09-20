@@ -1,0 +1,283 @@
+functions:
+  AddOrganization:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOAddOrganization
+    handler: WOAddOrganization.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOAddOrganization/WOAddOrganization.zip
+  AnswerSubmission:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOAnswerSubmission
+    handler: WOAnswerSubmission.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOAnswerSubmission/WOAnswerSubmission.zip
+  CandidateAgeAndGender:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCandidateAgeAndGender
+    handler: WOCandidateAgeAndGender.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCandidateAgeAndGender/WOCandidateAgeAndGender.zip
+  CandidateTestStatus:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCandidateTestStatus
+    handler: WOCandidateTestStatus.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCandidateTestStatus/WOCandidateTestStatus.zip
+  CheckDropped:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCheckDropped
+    handler: WOCheckDropped.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCheckDropped/WOCheckDropped.zip
+  CopyQuestionSet:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCopyQuestionSet
+    handler: WOCopyQuestionSet.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCopyQuestionSet/WOCopyQuestionSet.zip
+  CreateMultipleTest:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCreateMultipleTest
+    handler: WOCreateMultipleTest.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonicPandas:3
+    package:
+      artifact: WOCreateMultipleTest/WOCreateMultipleTest.zip
+  CreateQuestion:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCreateQuestion
+    handler: WOCreateQuestion.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCreateQuestion/WOCreateQuestion.zip
+  CreateQuestionSet:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCreateQuestionSet
+    handler: WOCreateQuestionSet.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCreateQuestionSet/WOCreateQuestionSet.zip
+  CreateTest:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOCreateTest
+    environment:
+        isHeaderValidationRequired: False
+    handler: WOCreateTest.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOCreateTest/WOCreateTest.zip
+  DeleteQuestion:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WODeleteQuestion
+    handler: WODeleteQuestion.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WODeleteQuestion/WODeleteQuestion.zip
+  DescScoreCalculate:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WODescScoreCalculate
+    handler: WODescScoreCalculate.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WODescScoreCalculate/WODescScoreCalculate.zip
+  GetActiveTestCount:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetActiveTestCount
+    handler: WOGetActiveTestCount.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetActiveTestCount/WOGetActiveTestCount.zip
+  GetCandidateDescriptiveScore:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetCandidateDescriptiveScore
+    handler: WOGetCandidateDescriptiveScore.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetCandidateDescriptiveScore/WOGetCandidateDescriptiveScore.zip
+  GetCandidateEmotionsScore:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetCandidateEmotionsScore
+    handler: WOGetCandidateEmotionsScore.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetCandidateEmotionsScore/WOGetCandidateEmotionsScore.zip
+  GetCandidateInfo:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetCandidateInfo
+    handler: WOGetCandidateInfo.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetCandidateInfo/WOGetCandidateInfo.zip
+  GetCandidateMCQScore:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetCandidateMCQScore
+    handler: WOGetCandidateMCQScore.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetCandidateMCQScore/WOGetCandidateMCQScore.zip
+  GetCandidatesCount:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetCandidatesCount
+    handler: WOGetCandidatesCount.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetCandidatesCount/WOGetCandidatesCount.zip
+  GetLiveTestsCount:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOGetLiveTestsCount
+    handler: WOGetLiveTestsCount.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOGetLiveTestsCount/WOGetLiveTestsCount.zip
+  Adduser:
+    events:
+    - http:
+        cors: 'true'
+        integration: lambda
+        method: post
+        path: WOAdduser
+    handler: WOAdduser.lambda_handler
+    layers:
+    - arn:aws:lambda:ap-south-1:880192836397:layer:workonic:4
+    package:
+      artifact: WOAdduser/WOAdduser.zip
+package:
+  individually: 'true'
+provider:
+  apiGateway:
+    restApiId: 6u5on0ekui
+    restApiRootResourceId: apv7vbysc4
+  apiName: workonic
+  deploymentBucket:
+    name: workonicdevelopmentlambdafiles
+  endpointType: regional
+  environment:
+    FROM: whirldatatest@gmail.com
+    TESTURL: https://dwp1t9fc6ebln.cloudfront.net
+    DATABASE: workonicdevelopment
+    HOSTNAME: ec2-13-232-206-255.ap-south-1.compute.amazonaws.com
+    PASSWORD: ''
+    PORT: '27017'
+    USERNAME: ''
+    isHeaderValidationRequired: 1
+    Region: ap-south-1
+    stage: dev2
+    cognitoregion: ap-south-1
+    userpoolid: ap-south-1_ulQqdOh0k
+    clientId: 5i6rvo1ao4nj09rr5p5ciqnjqn
+    videourl: https://s3-ap-southeast-2.amazonaws.com/workonicdevelopmentvideofiles/
+    videoregion: ap-southeast-2
+    videobucket: workonicdevelopmentvideofiles
+    audiotype: wav
+    SNSTopicArn: arn:aws:sns:ap-southeast-2:880192836397:workonic
+    RoleArn: arn:aws:iam::880192836397:role/workonic-sns
+  memorySize: 3008
+  name: aws
+  region: ap-south-1
+  role: arn:aws:iam::880192836397:role/workoincRole
+  runtime: python3.6
+  stackName: devlopment-Module1
+  stage: dev2
+  timeout: 900
+service: WO
